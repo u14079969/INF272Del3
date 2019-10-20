@@ -1,0 +1,142 @@
+﻿@model INF272Del3.Models.Product
+
+@{
+    ViewBag.Title = "Create";
+}
+ 
+<h2>Add New Product</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+
+    <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+    </script>
+  
+
+    <div class="form-horizontal">
+        <h4>Please complete the following form:</h4>
+        <hr /><br />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+           <h5>Name</h5> 
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h5>
+                Additional Info
+            </h5> 
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ProductInfo, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ProductInfo, "", new { @class = "text-danger" })
+                </div>
+</div>
+
+        <div class="form-group">
+            <h5>
+                Type
+            </h5> 
+                <div class="col-md-10">
+                    @Html.DropDownList("TypeID", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.TypeID, "", new { @class = "text-danger" })
+                </div>
+</div>
+
+        <div class="form-group">
+            <h5>
+                Condition
+            </h5> 
+                <div class="col-md-10">
+                    @Html.DropDownList("ConditionID", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.ConditionID, "", new { @class = "text-danger" })
+                </div>
+</div>
+
+        <div class="form-group">
+            <h5>
+                Main Category
+            </h5> 
+                <div class="col-md-10">
+                    @Html.DropDownList("CategoryID", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.CategoryID, "", new { @class = "text-danger" })
+                </div>
+</div>
+
+        <div class="form-group">
+            <h5>
+                Point Cost
+            </h5> 
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Cost, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Cost, "", new { @class = "text-danger" })
+                </div>
+</div>
+
+        <div class="form-group">
+            <h5>
+                Date Added
+            </h5> 
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ProductAddDate, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ProductAddDate, "", new { @class = "text-danger" })
+                </div>
+</div>
+
+        <div class="form-group">
+            <h5>
+                Gender Preference
+            </h5> 
+                <div class="col-md-10">
+                    @Html.DropDownList("GenderID", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.GenderID, "", new { @class = "text-danger" })
+                </div>
+</div>
+
+        <div class="form-group">
+            <h5>
+                Size
+            </h5> 
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Size, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Size, "", new { @class = "text-danger" })
+                </div>
+</div>
+        
+        <div class="form-group">
+            <h5>
+                Best Before Date
+            </h5> 
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.BestBefore, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.BestBefore, "", new { @class = "text-danger" })
+                </div>
+</div>
+
+        <div class="form-group">
+            <h5>
+                Color
+            </h5> 
+                <div class="col-md-10">
+                    @Html.DropDownList("ColorID", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.ColorID, "", new { @class = "text-danger" })
+                </div>
+</div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

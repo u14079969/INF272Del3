@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="179a412ad29540abaaf653347d4b0223" Name="Diagram1">
+        <EntityTypeShape EntityType="INF272D3Model.Company" Width="1.5" PointX="6" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="INF272D3Model.CompanyMember" Width="1.5" PointX="8.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="INF272D3Model.DonationDetail" Width="1.5" PointX="10.5" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="INF272D3Model.Donation" Width="1.5" PointX="8.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="INF272D3Model.Gender" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="INF272D3Model.ProductCategory" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="INF272D3Model.ProductColor" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="INF272D3Model.ProductCondition" Width="1.5" PointX="0.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="INF272D3Model.Product" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="INF272D3Model.ProductType" Width="1.5" PointX="0.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="INF272D3Model.Status" Width="1.5" PointX="3.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="INF272D3Model.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="INF272D3Model.User" Width="1.5" PointX="6" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="INF272D3Model.UserType" Width="1.5" PointX="3.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="INF272D3Model.WithdrawalDetail" Width="1.5" PointX="10.5" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="INF272D3Model.Withdrawal" Width="1.5" PointX="8.25" PointY="11" IsExpanded="true" />
+        <AssociationConnector Association="INF272D3Model.FK_CompanyMembers_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="INF272D3Model.FK_CompanyMembers_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="INF272D3Model.FK_DonationDetails_Donations" ManuallyRouted="false" />
+        <AssociationConnector Association="INF272D3Model.FK_DonationDetails_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="INF272D3Model.FK_Donations_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="INF272D3Model.FK_Products_Genders" ManuallyRouted="false" />
+        <AssociationConnector Association="INF272D3Model.FK_Users_Genders" ManuallyRouted="false" />
+        <AssociationConnector Association="INF272D3Model.FK_Products_ProductCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="INF272D3Model.FK_Products_ProductColors" ManuallyRouted="false" />
+        <AssociationConnector Association="INF272D3Model.FK_Products_ProductConditions" ManuallyRouted="false" />
+        <AssociationConnector Association="INF272D3Model.FK_Products_ProductTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="INF272D3Model.FK_WithdrawalDetails_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="INF272D3Model.FK_Users_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="INF272D3Model.FK_Users_UserTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="INF272D3Model.FK_Withdrawals_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="INF272D3Model.FK_WithdrawalDetails_Withdrawals" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

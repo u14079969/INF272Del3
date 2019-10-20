@@ -1,0 +1,116 @@
+﻿@model IEnumerable<INF272Del3.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        outline: none;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    html {
+        overflow-y: scroll;
+    }
+
+    }
+</style>
+<h2>Inventory</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")<br /><br />
+    @Html.ActionLink("Back", "AdminLogged", "Home")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Product Name
+        </th>
+        <th>
+            Information
+        </th>
+        <th>
+            Point Cost
+        </th>
+        <th>
+            Date Added
+        </th>
+        <th>
+            Size
+        </th>
+        <th>
+            Best Before Date
+        </th>
+        <th>
+            Gender Preference
+        </th>
+        <th>
+            Main Category
+        </th>
+        <th>
+            Color
+        </th>
+        <th>
+            Condition
+        </th>
+        <th>
+            Type
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductInfo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductAddDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Size)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BestBefore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender.Gender1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductCategory.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductColor.Color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductCondition.Condition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductType.ProductType1)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProductID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProductID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProductID })
+        </td>
+    </tr>
+}
+
+</table>
