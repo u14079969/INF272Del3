@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Welcome";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm("Request", "Withdrawal", FormMethod.Post))
+{
+    <button type="submit">Request a Donation</button>
+}
+

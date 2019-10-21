@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="INF272D3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+    </Key>
+    <Property Name="CompanyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CompanyAdress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CompanyPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CompanyPoints" Type="Int32" Nullable="false" />
+    <Property Name="CompanyDateJoined" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="CompanyMembers" Relationship="Self.FK_CompanyMembers_Companies" FromRole="Companies" ToRole="CompanyMembers" />
+  </EntityType>
+  <EntityType Name="CompanyMember">
+    <Key>
+      <PropertyRef Name="CMID" />
+    </Key>
+    <Property Name="CompanyID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="CMID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Company" Relationship="Self.FK_CompanyMembers_Companies" FromRole="CompanyMembers" ToRole="Companies" />
+    <NavigationProperty Name="User" Relationship="Self.FK_CompanyMembers_Users" FromRole="CompanyMembers" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="DonationDetail">
+    <Key>
+      <PropertyRef Name="DDID" />
+    </Key>
+    <Property Name="DonationID" Type="Int32" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="DDID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Donation" Relationship="Self.FK_DonationDetails_Donations" FromRole="DonationDetails" ToRole="Donations" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_DonationDetails_Products" FromRole="DonationDetails" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="Donation">
+    <Key>
+      <PropertyRef Name="DonationID" />
+    </Key>
+    <Property Name="DonationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="DonationDate" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="DonationDetails" Relationship="Self.FK_DonationDetails_Donations" FromRole="Donations" ToRole="DonationDetails" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Donations_Users" FromRole="Donations" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Gender">
+    <Key>
+      <PropertyRef Name="GenderID" />
+    </Key>
+    <Property Name="GenderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Gender1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Products_Genders" FromRole="Genders" ToRole="Products" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Users_Genders" FromRole="Genders" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="ProductCategory">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Products_ProductCategories" FromRole="ProductCategories" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="ProductColor">
+    <Key>
+      <PropertyRef Name="ColorID" />
+    </Key>
+    <Property Name="ColorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Products_ProductColors" FromRole="ProductColors" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="ProductCondition">
+    <Key>
+      <PropertyRef Name="ConditionID" />
+    </Key>
+    <Property Name="ConditionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Condition" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Products_ProductConditions" FromRole="ProductConditions" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ProductInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TypeID" Type="Int32" />
+    <Property Name="ConditionID" Type="Int32" />
+    <Property Name="CategoryID" Type="Int32" Nullable="false" />
+    <Property Name="Cost" Type="Single" Nullable="false" />
+    <Property Name="ProductAddDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="GenderID" Type="Int32" />
+    <Property Name="Size" Type="Int32" Nullable="false" />
+    <Property Name="BestBefore" Type="DateTime" Precision="0" />
+    <Property Name="ColorID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="DonationDetails" Relationship="Self.FK_DonationDetails_Products" FromRole="Products" ToRole="DonationDetails" />
+    <NavigationProperty Name="Gender" Relationship="Self.FK_Products_Genders" FromRole="Products" ToRole="Genders" />
+    <NavigationProperty Name="ProductCategory" Relationship="Self.FK_Products_ProductCategories" FromRole="Products" ToRole="ProductCategories" />
+    <NavigationProperty Name="ProductColor" Relationship="Self.FK_Products_ProductColors" FromRole="Products" ToRole="ProductColors" />
+    <NavigationProperty Name="ProductCondition" Relationship="Self.FK_Products_ProductConditions" FromRole="Products" ToRole="ProductConditions" />
+    <NavigationProperty Name="ProductType" Relationship="Self.FK_Products_ProductTypes" FromRole="Products" ToRole="ProductTypes" />
+    <NavigationProperty Name="WithdrawalDetails" Relationship="Self.FK_WithdrawalDetails_Products" FromRole="Products" ToRole="WithdrawalDetails" />
+  </EntityType>
+  <EntityType Name="ProductType">
+    <Key>
+      <PropertyRef Name="TypeID" />
+    </Key>
+    <Property Name="TypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductType1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Products_ProductTypes" FromRole="ProductTypes" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="UserStatusID" />
+    </Key>
+    <Property Name="UserStatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Users_Status" FromRole="Status" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserAdded" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PW" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserTypeID" Type="Int32" Nullable="false" />
+    <Property Name="UserPoints" Type="Int32" Nullable="false" />
+    <Property Name="GenderID" Type="Int32" Nullable="false" />
+    <Property Name="UserStatusID" Type="Int32" Nullable="false" />
+    <Property Name="GUID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="GUIDExpiry" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CompanyMembers" Relationship="Self.FK_CompanyMembers_Users" FromRole="Users" ToRole="CompanyMembers" />
+    <NavigationProperty Name="Donations" Relationship="Self.FK_Donations_Users" FromRole="Users" ToRole="Donations" />
+    <NavigationProperty Name="Gender" Relationship="Self.FK_Users_Genders" FromRole="Users" ToRole="Genders" />
+    <NavigationProperty Name="Status" Relationship="Self.FK_Users_Status" FromRole="Users" ToRole="Status" />
+    <NavigationProperty Name="UserType" Relationship="Self.FK_Users_UserTypes" FromRole="Users" ToRole="UserTypes" />
+    <NavigationProperty Name="Withdrawals" Relationship="Self.FK_Withdrawals_Users" FromRole="Users" ToRole="Withdrawals" />
+  </EntityType>
+  <EntityType Name="UserType">
+    <Key>
+      <PropertyRef Name="UserTypeID" />
+    </Key>
+    <Property Name="UserTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserType1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Users_UserTypes" FromRole="UserTypes" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="WithdrawalDetail">
+    <Key>
+      <PropertyRef Name="WDID" />
+    </Key>
+    <Property Name="WithdrawalID" Type="Int32" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="WDID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_WithdrawalDetails_Products" FromRole="WithdrawalDetails" ToRole="Products" />
+    <NavigationProperty Name="Withdrawal" Relationship="Self.FK_WithdrawalDetails_Withdrawals" FromRole="WithdrawalDetails" ToRole="Withdrawals" />
+  </EntityType>
+  <EntityType Name="Withdrawal">
+    <Key>
+      <PropertyRef Name="WithdrawalID" />
+    </Key>
+    <Property Name="WithdrawalID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="WithdrawalDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TotalPoints" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Withdrawals_Users" FromRole="Withdrawals" ToRole="Users" />
+    <NavigationProperty Name="WithdrawalDetails" Relationship="Self.FK_WithdrawalDetails_Withdrawals" FromRole="Withdrawals" ToRole="WithdrawalDetails" />
+  </EntityType>
+  <Association Name="FK_CompanyMembers_Companies">
+    <End Role="Companies" Type="Self.Company" Multiplicity="1" />
+    <End Role="CompanyMembers" Type="Self.CompanyMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companies">
+        <PropertyRef Name="CompanyID" />
+      </Principal>
+      <Dependent Role="CompanyMembers">
+        <PropertyRef Name="CompanyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CompanyMembers_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="CompanyMembers" Type="Self.CompanyMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="CompanyMembers">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DonationDetails_Donations">
+    <End Role="Donations" Type="Self.Donation" Multiplicity="1" />
+    <End Role="DonationDetails" Type="Self.DonationDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Donations">
+        <PropertyRef Name="DonationID" />
+      </Principal>
+      <Dependent Role="DonationDetails">
+        <PropertyRef Name="DonationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DonationDetails_Products">
+    <End Role="Products" Type="Self.Product" Multiplicity="1" />
+    <End Role="DonationDetails" Type="Self.DonationDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="DonationDetails">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Donations_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Donations" Type="Self.Donation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Donations">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Genders">
+    <End Role="Genders" Type="Self.Gender" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genders">
+        <PropertyRef Name="GenderID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="GenderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Genders">
+    <End Role="Genders" Type="Self.Gender" Multiplicity="1" />
+    <End Role="Users" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genders">
+        <PropertyRef Name="GenderID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="GenderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_ProductCategories">
+    <End Role="ProductCategories" Type="Self.ProductCategory" Multiplicity="1" />
+    <End Role="Products" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCategories">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_ProductColors">
+    <End Role="ProductColors" Type="Self.ProductColor" Multiplicity="1" />
+    <End Role="Products" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductColors">
+        <PropertyRef Name="ColorID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="ColorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_ProductConditions">
+    <End Role="ProductConditions" Type="Self.ProductCondition" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductConditions">
+        <PropertyRef Name="ConditionID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="ConditionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_ProductTypes">
+    <End Role="ProductTypes" Type="Self.ProductType" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductTypes">
+        <PropertyRef Name="TypeID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="TypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WithdrawalDetails_Products">
+    <End Role="Products" Type="Self.Product" Multiplicity="1" />
+    <End Role="WithdrawalDetails" Type="Self.WithdrawalDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="WithdrawalDetails">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Status">
+    <End Role="Status" Type="Self.Status" Multiplicity="1" />
+    <End Role="Users" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="UserStatusID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="UserStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_UserTypes">
+    <End Role="UserTypes" Type="Self.UserType" Multiplicity="1" />
+    <End Role="Users" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserTypes">
+        <PropertyRef Name="UserTypeID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="UserTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Withdrawals_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Withdrawals" Type="Self.Withdrawal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Withdrawals">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WithdrawalDetails_Withdrawals">
+    <End Role="Withdrawals" Type="Self.Withdrawal" Multiplicity="1" />
+    <End Role="WithdrawalDetails" Type="Self.WithdrawalDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Withdrawals">
+        <PropertyRef Name="WithdrawalID" />
+      </Principal>
+      <Dependent Role="WithdrawalDetails">
+        <PropertyRef Name="WithdrawalID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="INF272D3Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Companies" EntityType="Self.Company" />
+    <EntitySet Name="CompanyMembers" EntityType="Self.CompanyMember" />
+    <EntitySet Name="DonationDetails" EntityType="Self.DonationDetail" />
+    <EntitySet Name="Donations" EntityType="Self.Donation" />
+    <EntitySet Name="Genders" EntityType="Self.Gender" />
+    <EntitySet Name="ProductCategories" EntityType="Self.ProductCategory" />
+    <EntitySet Name="ProductColors" EntityType="Self.ProductColor" />
+    <EntitySet Name="ProductConditions" EntityType="Self.ProductCondition" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="ProductTypes" EntityType="Self.ProductType" />
+    <EntitySet Name="Status" EntityType="Self.Status" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="UserTypes" EntityType="Self.UserType" />
+    <EntitySet Name="WithdrawalDetails" EntityType="Self.WithdrawalDetail" />
+    <EntitySet Name="Withdrawals" EntityType="Self.Withdrawal" />
+    <AssociationSet Name="FK_CompanyMembers_Companies" Association="Self.FK_CompanyMembers_Companies">
+      <End Role="Companies" EntitySet="Companies" />
+      <End Role="CompanyMembers" EntitySet="CompanyMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CompanyMembers_Users" Association="Self.FK_CompanyMembers_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="CompanyMembers" EntitySet="CompanyMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DonationDetails_Donations" Association="Self.FK_DonationDetails_Donations">
+      <End Role="Donations" EntitySet="Donations" />
+      <End Role="DonationDetails" EntitySet="DonationDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DonationDetails_Products" Association="Self.FK_DonationDetails_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="DonationDetails" EntitySet="DonationDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Donations_Users" Association="Self.FK_Donations_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Donations" EntitySet="Donations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Genders" Association="Self.FK_Products_Genders">
+      <End Role="Genders" EntitySet="Genders" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Genders" Association="Self.FK_Users_Genders">
+      <End Role="Genders" EntitySet="Genders" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_ProductCategories" Association="Self.FK_Products_ProductCategories">
+      <End Role="ProductCategories" EntitySet="ProductCategories" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_ProductColors" Association="Self.FK_Products_ProductColors">
+      <End Role="ProductColors" EntitySet="ProductColors" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_ProductConditions" Association="Self.FK_Products_ProductConditions">
+      <End Role="ProductConditions" EntitySet="ProductConditions" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_ProductTypes" Association="Self.FK_Products_ProductTypes">
+      <End Role="ProductTypes" EntitySet="ProductTypes" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WithdrawalDetails_Products" Association="Self.FK_WithdrawalDetails_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="WithdrawalDetails" EntitySet="WithdrawalDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Status" Association="Self.FK_Users_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_UserTypes" Association="Self.FK_Users_UserTypes">
+      <End Role="UserTypes" EntitySet="UserTypes" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Withdrawals_Users" Association="Self.FK_Withdrawals_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Withdrawals" EntitySet="Withdrawals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WithdrawalDetails_Withdrawals" Association="Self.FK_WithdrawalDetails_Withdrawals">
+      <End Role="Withdrawals" EntitySet="Withdrawals" />
+      <End Role="WithdrawalDetails" EntitySet="WithdrawalDetails" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

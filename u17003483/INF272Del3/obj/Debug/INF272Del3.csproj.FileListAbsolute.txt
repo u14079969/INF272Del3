@@ -1,0 +1,100 @@
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\ApplicationInsights.config
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\roslyn\csc.exe
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\roslyn\vbc.exe
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\roslyn\VBCSCompiler.exe
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\INF272Del3.dll.config
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\INF272Del3.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\INF272Del3.pdb
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\Microsoft.AI.Web.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\Microsoft.ApplicationInsights.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\System.Web.Helpers.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\System.Web.Mvc.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\System.Web.Razor.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\System.Web.Webpages.Deployment.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\System.Web.Webpages.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\System.Web.Webpages.Razor.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\Microsoft.AI.Web.xml
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\Microsoft.ApplicationInsights.xml
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\System.Web.Razor.xml
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\System.Web.Webpages.xml
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\System.Web.Webpages.Deployment.xml
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\System.Web.Webpages.Razor.xml
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\System.Web.Helpers.xml
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\System.Web.Mvc.xml
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\obj\Debug\INF272Del3.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\obj\Debug\INF272Del3.pdb
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\EntityFramework.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\EntityFramework.SqlServer.dll
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\EntityFramework.xml
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\bin\EntityFramework.SqlServer.xml
+C:\Users\micha\Desktop\INF272D3\INF272Del3\INF272Del3\obj\Debug\INF272Del3.csprojResolveAssemblyReference.cache
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\ApplicationInsights.config
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\roslyn\csc.exe
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\roslyn\vbc.exe
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\roslyn\VBCSCompiler.exe
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\INF272Del3.dll.config
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\INF272Del3.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\INF272Del3.pdb
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\EntityFramework.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\EntityFramework.SqlServer.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\Microsoft.AI.Web.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\System.Web.Helpers.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\System.Web.Mvc.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\System.Web.Razor.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\System.Web.Webpages.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\System.Web.Webpages.Razor.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\EntityFramework.xml
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\EntityFramework.SqlServer.xml
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\Microsoft.AI.Web.xml
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\System.Web.Razor.xml
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\System.Web.Webpages.xml
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\System.Web.Webpages.Razor.xml
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\System.Web.Helpers.xml
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\bin\System.Web.Mvc.xml
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\obj\Debug\INF272Del3.csprojResolveAssemblyReference.cache
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\obj\Debug\INF272Del3.dll
+C:\Users\Nantes\Documents\University of Pretoria\2019\Year\INF 272\NewAssignement\INF272Del3\obj\Debug\INF272Del3.pdb
