@@ -1,0 +1,104 @@
+﻿
+@model INF272Del3.Models.Product
+@{
+    ViewBag.Title = "DonorLogged";
+}
+
+<h2>DonorLogged</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductInfo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductInfo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductAddDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductAddDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Size)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Size)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BestBefore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BestBefore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender.Gender1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender.Gender1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductCategory.Category)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductCategory.Category)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductColor.Color)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductColor.Color)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductCondition.Condition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductCondition.Condition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductType.ProductType1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductType.ProductType1)
+        </dd>
+
+    </dl>
+</div>
+
+<input type="button" title="Make Donation"  onclick="location.href='@Url.Action("Products", "Create")'" />  

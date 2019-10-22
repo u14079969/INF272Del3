@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "AdminLogged";
+}
+
+<h2>Admin Home Page</h2>
+<input id="Button1" type="button" value="Reports" onclick="@("window.location.href='" + @Url.Action("Index", "Users") + "'");"><br /><br/>
+<input id="Button1" type="button" value="Inventory" onclick="@("window.location.href='" + @Url.Action("Index", "Products") + "'");"><br /><br />
+<input id="Button1" type="button" value="Users" onclick="@("window.location.href='" + @Url.Action("Index", "Users") + "'");" /><br /><br />
+
